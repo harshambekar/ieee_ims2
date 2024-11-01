@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #toggle{
+        position: relative;
+        top: 0;
+        left: 50%;  
+        transform: translate(-50%,0);  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      
+        margin: 1em 0;
+        padding: 0.8em 1.6em;
+        background: rgba(255, 255, 255, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 40px;
+        backdrop-filter: blur(20px);
+        box-shadow:0 0 50px -10px rgb(0, 0, 0) ;
+        cursor: pointer;
+        z-index: 10000;
+
+    }
+
+    #square-container{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        box-sizing: border-box;
+        overflow: hidden;
+        z-index: 10000;
+        pointer-events: none;
+
+
+    }
+    .square{
+        width: 100px;
+        height: 100px;
+        background: red;
+        box-sizing: border-box;
+        pointer-events: none;
+    }
+
+    .content-overlay{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        gap: 5em;
+        color: azure;
+        z-index: -1;
+        background: purple;
+
+    }
+    .content-overlay .navlink a{
+        padding: 0 1em;
+        font-size: 2em;
+        font-weight: 300;
+        text-decoration: none;
+        color: azure;
+        text-transform: uppercase;
+
+    }
+
+
+
+</style>
+
+<body>
+    <div id="toggle">
+        <?xml version="1.0" ?>
+        <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+            height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32"
+            width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path
+                d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+        </svg>
+    </div>
+
+    <div class="content-overlay">
+        <div class="nav-links">
+            <div class="navlink">
+                <span>01</span>
+                <a href="#">hello</a>
+
+            </div>
+            <div class="navlink">
+                <span>01</span>
+                <a href="#">hello</a>
+
+            </div>
+            <div class="navlink">
+                <span>01</span>
+                <a href="#">hello</a>
+
+            </div>
+            <div class="navlink">
+                <span>01</span>
+                <a href="#">hello</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</body>
+
+</html>

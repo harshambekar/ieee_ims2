@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    html {
+        overscroll-behavior: none;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    html,
+    body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        height: 100%;
+    }
+
+    h1 {
+        font-size: 80px;
+        ;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: -0.02em;
+
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.5;
+        width: 50%;
+
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+
+    }
+
+    .logo {
+        position: fixed;
+        top: 0;
+        right: 0;
+        ;
+        margin: 2em;
+        width: 18px;
+        height: 18px;
+        background: red;
+        border-radius: 100%;
+        z-index: 10000;
+
+
+    }
+
+    .header {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        display: flex;
+        z-index: 2;
+
+
+
+    }
+
+    .lettersfir {
+
+        flex: 1;
+
+        display: flex;
+
+        text-transform: uppercase;
+    }
+    .letterssec {
+
+flex: 1;
+
+display: flex;
+
+text-transform: uppercase;
+}
+
+    .lettersfir>div {
+
+        flex: 1;
+
+        font-size: 18vw;
+
+        font-weight: 400;
+
+        color: #000;
+
+        text-align: center;
+    }
+    .lettersec>div {
+
+flex: 1;
+
+font-size: 18vw;
+
+font-weight: 400;
+
+color: #000;
+
+text-align: center;
+}
+
+    .website-content {
+
+        position: fixed;
+
+        top: 0;
+
+        width: 100%;
+
+        min-height: 100vh;
+
+    }
+
+    
+
+
+    .img-holder {
+
+        position: relative;
+
+        top: 0;
+
+        width: 100%;
+
+        height: 100vh;
+
+        background: #eee;
+
+        clip-path: polygon(37.5% 20%, 62.5% 20%, 62.5% 80%, 37.5% 80%);
+        transform: rotate(30deg);
+
+    }
+
+    .img-holder img {
+        position: relative;
+        transform: scale(2);
+
+    }
+
+
+    .content-holder {
+
+        position: relative;
+
+        top: -5px;
+
+        width: 100%;
+
+        background: #000;
+
+        color: #eee;
+
+        padding: 1em;
+    }
+
+    .row {
+
+
+        margin: 2em 1em;
+    }
+
+    img {
+     
+        padding-left: 400px;
+
+        width: 700px;
+        height: 500px;
+
+    }
+
+
+
+    .row:nth-child(2).img {
+        position: relative;
+        left: 50%;
+    }
+
+    .row:nth-child(3).img {
+        position: relative;
+        left: 15%;
+    }
+
+    .row:nth-child(4).img {
+        position: relative;
+        left: 70%;
+    }
+
+    .row:nth-child(6) p {
+        position: relative;
+        left: 30%;
+        margin: 4em 0;
+    }
+</style>
+
+<body>
+    <div class="logo"> </div>
+    <div class="header">
+        <div class="lettersfir">
+            <div>T</div>
+            <div>E</div>
+            <div>A</div>
+            <div>M</div>
+        </div>
+        <div class="lettersec">
+            <div>I</div>
+            <div>M</div>
+            <div>S</div>
+        </div>
+    </div>
+
+
+
+    <div class="website-content">
+        <div class="img-holder">
+            <img src="./HD-wallpaper-shahrukh-khan-srk-smile-srk-smile.jpg" alt="">
+        </div>
+
+
+
+        <div class="content-holder">
+
+            <div class="row">
+
+                <h1>History</h1>
+
+            </div>
+
+            <div class="row">
+
+                <div class="img">
+
+                    <img src="./shin.jpg" alt="" />
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="img">
+
+                    <img src="./hage.jpg" alt="" />
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="img">
+
+                    <img src="./hage.jpg" alt="" />
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta quisquam molestias sit nisi
+                    dipisci!</p>
+            </div>
+            <div class="row">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta quisquam molestias sit nisi
+                    dipisci!</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.addEventListener("DOMContentLoaded", function () {
+  const contentHolderHeight = document.querySelector(".content-holder").offsetHeight;
+  const imgHolderHeight = window.innerHeight; // Use window height for img-holder
+  const additionalScrollHeight = window.innerHeight;
+
+  const totalBodyHeight = contentHolderHeight + imgHolderHeight + additionalScrollHeight;
+
+  document.body.style.height = `${totalBodyHeight}px`;
+});
+
+    ScrollTrigger.create({
+        trigger: ".website-content",
+        start: "-0.1% top",
+        end: "bottom bottom",
+        onEnter: () => {
+            gsap.set(".website-content", { position: 'absolute', top: '195%' }); // Change '195%' to '0%'
+        },
+        onLeaveBack: () => {
+            gsap.set(".website-content", { position: 'fixed', top: '0' });
+        }
+    });
+
+    gsap.to(".header.lettersfir", {
+        x: () => -innerWidth * 3,
+        scale: 10,
+        ease: "power2.inOut",
+        ScrollTrigger: {
+            start: "top top",
+            end: `+=200%`, // Changed to "bottom top"
+            scrub: 1
+        }
+    });
+
+    gsap.to(".header.lettersec", {
+        x: () => -innerWidth * 3,
+        scale: 10,
+        ease: "power2.inOut",
+        scrollTrigger: {
+            start: "top top",
+            end: `+=200%`, // Changed to "bottom top"
+            scrub: 1
+        }
+    });
+
+
+    gsap.to(".img-holder", {
+        rotation:0,
+        clipPath: 'polygon(0% 0%,100% 0%,100% 100%,0% 100%)',
+        ease: "power2.inOut",
+        scrollTrigger: {
+            start: "top top",
+            end: `+=200%`, // Changed to "bottom top"
+            scrub: 1
+        }
+    });
+    gsap.to(".img-holder img", {
+        rotation:0,
+        ease: "power2.inOut",
+        scrollTrigger: {
+            start: "top top",
+            end: `+=200%`, // Changed to "bottom top"
+            scrub: 1
+        }
+    });
+
+
+</script>
+
+
+
+
+</html>
